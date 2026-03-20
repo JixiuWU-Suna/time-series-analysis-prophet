@@ -22,3 +22,7 @@ This project applies time series analysis to forecast monthly Consumer Price Ind
 ## Files
 - Coursework1_231180728.Rmd – main analysis
 - Coursework1_231180728.html – final report
+
+## Live Report
+This is the link of website report:
+https://coursework1-231180728.netlify.app/
