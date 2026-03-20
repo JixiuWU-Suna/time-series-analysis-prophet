@@ -90,8 +90,9 @@ Therefore, there are some uncertainty in the forecast.
 # 6.Summary
 
 ln summary, this project analyses the monthly Consumer Price Index of Transportation time series.
-This data shows a clear upward trend from 1947 to 2026. Seasonal fluctuations were present but minor relative to the trend. The forecast shows that prices of transportation will still rise in the future.
-Therefore, the model reflects the main patterns in the data and provides useful insights to the future trends.
+This data shows a clear upward trend from 1947 to 2026. Seasonal fluctuations were present but minor relative to the trend. The forecast shows that prices of transportation will probably still rise in the future, ebven there might be some short-term fluctuations.
+However, the results shoud be treated with caution, because unexpected events could affect future changes.
+
 
 # References
 
