@@ -4,7 +4,8 @@ This project applies time series analysis to forecast monthly Consumer Price Ind
 
 ## Methods
 - Data preprocessing
-- Seasonal decomposition
+- Trend
+- Seasonality
 - Prophet model fitting
 - Forecasting and uncertainty intervals
 
@@ -12,11 +13,12 @@ This project applies time series analysis to forecast monthly Consumer Price Ind
 - R
 - Prophet
 - RMarkdown
+- RProject
 
 ## Key Results
 - Identified upward trend in CPI
 - Generated future forecasts with confidence intervals
 
 ## Files
-- `Coursework1_231180728.Rmd` – main analysis
-- `Coursework1_231180728.html` – final report
+- Coursework1_231180728.Rmd – main analysis
+- Coursework1_231180728.html – final report
