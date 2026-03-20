@@ -30,6 +30,8 @@ It measures how the price of transportation change over time.
 The purpose of the project is to analyse the monthly Consumer Price Index time series.
 The objective is to identify trend and seasonal patterns, then build a time series model using Prophet.
 
+Using Prophet is because Prophet could capture both trend and seasonality in time series data in a simple way.
+
 
 
 
