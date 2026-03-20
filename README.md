@@ -28,5 +28,5 @@ This is the link of website report:
 https://coursework1-231180728.netlify.app/
 
 ## Author
-Jixiu WU
-BSc Mathematics with Finance and Accounting, Queen Mary University of London
+-Jixiu WU
+-BSc Mathematics with Finance and Accounting, Queen Mary University of London
