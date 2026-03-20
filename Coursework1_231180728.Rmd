@@ -1,0 +1,97 @@
+---
+title: "MTH6139 Time Series" 
+subtitle: "Coursework 1 _ 231180728" 
+author: "Jixiu WU" 
+date: "Spring term 2025" 
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: spacelab 
+    highlight: tango
+---
+
+
+
+```{r, echo=FALSE}
+# This code will display the QMUL logo at the top right of the page
+# Do not change this code
+htmltools::img(src = knitr::image_uri("images/QMlogo.png"),
+               alt = 'logo',
+               style = 'position:absolute; top:0; right:0; padding:10px; width:20%;')
+```
+
+
+## 1. Introduction
+
+This project shows the monthly Consumer Price Index of Transportation in U.S. City average for all urban consumers from January 1947 to February 2026.
+It measures how the price of transportation change over time.
+
+The purpose of the project is to analyse the monthly Consumer Price Index time series.
+The objective is to identify trend and seasonal patterns, then build a time series model using Prophet.
+
+
+
+
+## 2. Data
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(prophet)
+library(readr)
+
+transport_cpi_rawdata <- read_csv("data/CPITRNSL.csv")
+transport_df <- data.frame(
+    ds = as.Date(transport_cpi_rawdata$observation_date),
+    y = transport_cpi_rawdata$CPITRNSL
+)
+head(transport_df)
+model = prophet(transport_df)
+future = make_future_dataframe(model, 8, freq = "month")
+forecast = predict(model, future)
+plot(model, forecast)
+```
+
+
+
+
+## 3.Trend
+
+The overall chart shows a clear upward trend.
+From 1947 to 1974, there was a slow increase. A strong upward trend emerged starting specifically in 1974.
+Despite the impact of the COVID-19 pandemic, the trend rise continually with notable fluctuations between 2019 and 2023.
+After 2024, prices have risen sharply.
+
+
+
+
+## 4.Seasonality
+
+```{r echo=FALSE, warning=FALSE}
+prophet_plot_components(model, forecast)
+```
+The seasonal component shows some variations within a year. There are several peaks and dips at different times of the year.
+However, the magnitude of changes is relatively small compared to the overall trend.
+
+
+
+
+## 5.Forecasting Results
+
+The forecasting result shows that the monthly Consumer Price Index will continue increasing in the future.
+This follows the strong upward trend in the data.
+The uncertainty intervals show some variations around predictions.
+Therefore, there are some uncertainty in the forecast. 
+
+
+
+
+## 6.Summary
+
+ln summary, this project analyses the monthly Consumer Price Index of Transportation time series.
+This data shows a clear upward trend from 1947 to 2026. Seasonal fluctuations were present but minor relative to the trend. The forecast shows that prices of transportation will still rise in the future.
+Therefore, the model reflects the main patterns in the data and provides useful insights to the future trends.
+
+# References
+
+- RStudio reference: <https://rmarkdown.rstudio.com/lesson-1.html>
+- Data reference: <https://fred.stlouisfed.org/series/CPITRNSL>
